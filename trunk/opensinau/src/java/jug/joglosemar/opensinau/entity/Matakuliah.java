@@ -6,7 +6,6 @@
 package jug.joglosemar.opensinau.entity;
 
 import java.io.Serializable;
-import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,18 +16,9 @@ import javax.persistence.Id;
  * @author Hendro
  */
 @Entity
-public class Mahasiswa implements Serializable {
+public class Matakuliah implements Serializable {
     private static final long serialVersionUID = 1L;
     private Long id;
-    String nomorInduk;
-    String namaDepan;
-    String namaTengah;
-    String namaKeluarga;
-    String tempatLahir;
-    Date tanggalLahir;
-    String alamat1;
-    String alamat2;
-    Provinsi provinsi;
 
     public void setId(Long id) {
         this.id = id;
@@ -50,10 +40,10 @@ public class Mahasiswa implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Mahasiswa)) {
+        if (!(object instanceof Matakuliah)) {
             return false;
         }
-        Mahasiswa other = (Mahasiswa) object;
+        Matakuliah other = (Matakuliah) object;
         if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
@@ -62,7 +52,7 @@ public class Mahasiswa implements Serializable {
 
     @Override
     public String toString() {
-        return "jug.joglosemar.opensinau.entity.Mahasiswa[id=" + id + "]";
+        return "jug.joglosemar.opensinau.entity.Matakuliah[id=" + id + "]";
     }
 
 }
